@@ -1,1 +1,13 @@
-<p>header works!</p>
+<nav class="menu">
+    <ul>
+      <li *ngFor="let category of categories" (click)="toggleSubmenu(category.name)">
+        <a>{{ category.name }}</a>
+        <ul class="submenu" *ngIf="category.open">
+          <li *ngFor="let subcategory of category.subcategories">
+            <a [routerLink]="['/category', subcategory]">{{ subcategory }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  
