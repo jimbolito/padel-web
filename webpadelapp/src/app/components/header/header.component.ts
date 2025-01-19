@@ -13,14 +13,30 @@ export class HeaderComponent {
   categories = [
     {
       name: 'Palas de padel',
-      subcategories: ['Adidas', 'Bullpadel', 'Babolat'],
+      subcategories: ['Adidas', 'Bullpadel', 'Babolat', 'Puma'],
+      open: false,
+    },
+    {
+      name: 'Zapatillas',
+      subcategories: ['Adidas', 'Bullpadel', 'Babolat', 'Puma'],
+      open: false,
+    },
+    {
+      name: 'Ropa',
+      subcategories: ['Adidas', 'Bullpadel', 'Babolat', 'Puma'],
+      open: false,
+    },
+    {
+      name: 'Pelotas',
+      subcategories: ['Adidas', 'Bullpadel', 'Babolat', 'Puma'],
       open: false,
     },
     {
       name: 'Accesorios',
-      subcategories: ['Bolsas', 'Calzados'],
+      subcategories: ['Adidas', 'Bullpadel', 'Babolat', 'Puma'],
       open: false,
     },
+
   ];
 
   toggleSubmenu(categoryName: string): void {
