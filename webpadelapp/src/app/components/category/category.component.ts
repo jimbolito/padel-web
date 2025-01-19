@@ -1,27 +1,14 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-category',
-//   standalone: true,
-//   imports: [],
-//   templateUrl: './category.component.html',
-//   styleUrl: './category.component.css'
-// })
-// export class CategoryComponent {
-
-// }
-
-//ORIGINAL 
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common'; // Para *ngIf, *ngFor
 
 @Component({
   selector: 'app-category',
   standalone: true,
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css'],
+  imports: [CommonModule], // Importa CommonModule para *ngIf, *ngFor
 })
 export class CategoryComponent implements OnInit {
   categoryName: string | null = '';

@@ -15,14 +15,14 @@ import { HomeComponent } from './app/components/home/home.component';
 import { CategoryComponent } from './app/components/category/category.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Ruta principal
-  { path: 'category/:subcategory', component: CategoryComponent }, // Ruta dinámica para categorías
-  { path: '**', redirectTo: '' }, // Redirección por defecto
+  { path: '', component: HomeComponent },
+  { path: 'category/:subcategory', component: CategoryComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes), // Configuración de rutas
-    provideHttpClient(), // Configuración del cliente HTTP
+    provideRouter(routes),
+    provideHttpClient(),
   ],
 });
