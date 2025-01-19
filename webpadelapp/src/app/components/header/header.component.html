@@ -1,4 +1,4 @@
-<nav class="menu">
+<!-- <nav class="menu">
     <ul>
       <li *ngFor="let category of categories" (click)="toggleSubmenu(category.name)">
         <a>{{ category.name }}</a>
@@ -10,4 +10,42 @@
       </li>
     </ul>
   </nav>
-  
+   -->
+
+<!-- Despues del servicio -->
+<!-- <nav class="menu">
+  <ul>
+    <li *ngFor="let category of categories" (click)="toggleSubmenu(category.name)">
+      <a>{{ category.name }}</a>
+      <ul class="submenu" *ngIf="category.open">
+        <li *ngFor="let subcategory of category.subcategories">
+          <a [routerLink]="['/category', subcategory]" [queryParams]="{ category: category.name }">
+            {{ subcategory }}
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav> -->
+
+<!-- menu home redireccion al home -->
+<nav class="menu">
+  <ul>
+    <!-- Menú Home -->
+    <li>
+      <a [routerLink]="'/'">Home</a>
+    </li>
+
+    <!-- Menú con categorías y subcategorías -->
+    <li *ngFor="let category of categories" (click)="toggleSubmenu(category.name)" [class.has-subcategories]="category.subcategories.length > 0">
+      <a>{{ category.name }}</a>
+      <ul class="submenu" *ngIf="category.open">
+        <li *ngFor="let subcategory of category.subcategories">
+          <a [routerLink]="['/category', subcategory]" [queryParams]="{ category: category.name }">
+            {{ subcategory }}
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

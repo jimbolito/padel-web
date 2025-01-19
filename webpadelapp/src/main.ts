@@ -7,9 +7,31 @@
 
 
 //Original: 
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { provideRouter, Routes } from '@angular/router';
+// import { provideHttpClient } from '@angular/common/http'; // Nuevo enfoque
+// import { AppComponent } from './app/app.component';
+// import { HomeComponent } from './app/components/home/home.component';
+// import { CategoryComponent } from './app/components/category/category.component';
+
+// const routes: Routes = [
+//   { path: '', component: HomeComponent },
+//   { path: 'category/:subcategory', component: CategoryComponent },
+//   { path: '**', redirectTo: '' },
+// ];
+
+// bootstrapApplication(AppComponent, {
+//   providers: [
+//     provideRouter(routes),
+//     provideHttpClient(),
+//   ],
+// });
+
+
+//Despues del servicio: 
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, Routes } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http'; // Nuevo enfoque
+import { provideHttpClient } from '@angular/common/http';
 import { AppComponent } from './app/app.component';
 import { HomeComponent } from './app/components/home/home.component';
 import { CategoryComponent } from './app/components/category/category.component';
