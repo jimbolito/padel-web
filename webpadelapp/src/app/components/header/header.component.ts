@@ -94,4 +94,12 @@ export class HeaderComponent {
       cat.name === categoryName ? { ...cat, open: !cat.open } : { ...cat, open: false }
     );
   }
+
+  // toggleSubmenu(categoryName: string): void {
+  //   this.categories = this.categories.map((category) =>
+  //     category.name === categoryName
+  //       ? { ...category, open: !category.open } // Abrir/cerrar el menú seleccionado
+  //       : { ...category, open: false } // Cerrar otros submenús
+  //   );
+  // }
 }
